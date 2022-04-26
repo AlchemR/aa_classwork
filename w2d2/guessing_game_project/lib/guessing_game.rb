@@ -27,22 +27,23 @@ def check_num (numb)
 numb = numb.to_i
     if numb == @secret_num
         puts "game over, you win"
-        game_over = true
+        @game_over = true
 
-    elsif numb != @secret_num && @secret_num > numb
+    elsif numb != @secret_num && @secret_num < numb
     puts "too big"
     @num_attempts += 1
-    elsif numb != @secret_num && @secret_num < numb
+    elsif numb != @secret_num && @secret_num > numb
         puts "too small"
         @num_attempts += 1
     end
 end
 
 def ask_user
-    puts "enter a number"
+    print "enter a number"
     input = gets
-    num_input.to_i = input.chomp
-    check_num(num_input)
+    num_input = input.chomp
+    num_input.to_i
+    check_num(num_input.to_i)
 end
 
 
