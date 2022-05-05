@@ -147,31 +147,26 @@ end
 
 # p merge_sort([1,9,2,8,3,6,7,3])
 
-# #close but does not work
 
-# def merge(ele1, ele2)
-# bubble = false
-# while bubble = false
-#     bubble = true
+# def subsets(arr)
+# return [[]] if arr.length == 0
+# subsets = subsets(arr[0...-1])
+# subsets + subsets.map {|ele| ele += [arr[-1]]}
 # end
-# #works, but why go recursive
 
-def array_subsets(arr)
-    return arr if !arr.is_a?(Array)
-    # i = 0
-    # while i < arr.length
-    #     temp = []
-    #     arr.each do |e|
-    #         temp << e
-    #     end
-    #     result += temp
-    #     i += 1
-    # end
-    arr.each do |ele|
-      array_subsets(arr[1..-1])
-    end
-    # # array_subsets(arr.length) 
-    # somearr << array_subsets(arr.pop)
+# p subsets([]) # => [[]]
+# p subsets([1]) # => [[], [1]]
+# p subsets([1, 2]) # => [[], [1], [2], [1, 2]]
+# p subsets([1, 2, 3])
+# # => [[], [1], [2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3]]
+
+
+def permutations(arr)
+    arr.each_with_index do |ele, idx|
+
+        permutations(arr[0..idx])
+    end 
 end
-
-p array_subsets([1,2,3])
+p permutations([1, 2, 3]) # => [[1, 2, 3], [1, 3, 2],
+                        #     [2, 1, 3], [2, 3, 1],
+                        #     [3, 1, 2], [3, 2, 1]]
