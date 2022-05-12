@@ -7,17 +7,17 @@ class Simon
   def initialize
     @sequence_length = 1
     @game_over = false
-    @seq = []
+    @sequence = []
   end
 
   def play
-    until game_over 
+    until @game_over == true
       self.take_turn
       system('clear') 
     end
 
-    self.game_over_message 
-    self.reset_game 
+    self.game_over
+    self.reset
   end
 
   def take_turn
@@ -40,32 +40,30 @@ class Simon
   def require_sequence
     p "Type in each color then press Enter"
 
-    @seq.each do |color| 
+    @sequence.each do |color| 
       user_guess = gets.chomp 
       @game_over = true if user_guess != color 
     end
   end
 
   def add_random_color
-    @seq << COLORS.sample
+    @sequence << COLORS.rand
   end
 
   def round_success_message
     p "good job"
   end
 
-  def game_over_message
+  def game_over
     p "Try again with more allocated memory"
   end
 
-  def reset_game
+  def reset
     @sequence_length = 1
     @game_over = false 
-    @seq = []
+    @sequence = []
   end
 
 end
 
 
-  game = Simon.new
-  game.play
