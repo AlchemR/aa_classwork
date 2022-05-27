@@ -11,12 +11,31 @@ Rails.application.routes.draw do
     #           PUT    /users/:id(.:format)                                                                     users#update
     #           DELETE /users/:id(.:format)                                                                     users#destroy
 
-    get '/users', to: 'users#index', as: 'index_user'
-    post '/users', to: 'users#create', as: 'create_user'
-    post '/users/new', to: 'users#new', as: 'new_user'
-    get '/users/:id/edit', to: 'users#edit', as: 'edit_user' 
-    get '/users/:id', to: 'users#show', as: 'show_user'
-    patch '/users/:id', to: 'users#update', as: 'update_user'
-    put '/users/:id', to: 'users#update'
-    delete '/users/:id', to: 'users#destroy', as: 'destroy_user'
+    # get '/users', to: 'users#index', as: 'index_user'
+    # post '/users', to: 'users#create', as: 'create_user'
+    # post '/users/new', to: 'users#new', as: 'new_user'
+    # get '/users/:id/edit', to: 'users#edit', as: 'edit_user' 
+    # get '/users/:id', to: 'users#show', as: 'show_user'
+    # patch '/users/:id', to: 'users#update', as: 'update_user'
+    # put '/users/:id', to: 'users#update'
+    # delete '/users/:id', to: 'users#destroy', as: 'destroy_user'
+
+    resources :users, only: [:show, :destroy, :update, :create, :index]
+    # resources :artworks, only: [:show, :destroy, :update, :create, :index]
+    resources :artworks, only: [:show, :destroy, :update, :create, :index]
+    resources :artwork_shares, only: [:create, :destroy]
+    resources :users do 
+      resources :artworks, only: :index
+    end
+
+    resources :comments, only: [:create, :destroy, :index]
+    
+    resources :users do
+      resources :comments, only: :index
+    end
+
+    resources :artworks do
+      resources :comments, only: :index
+    end
+
 end

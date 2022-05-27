@@ -1,15 +1,16 @@
 class UsersController < ApplicationController
 
   def index
-    @chirp = User.all
-    render json: @chirp
+    if User.find(params :id)
+    else
+      @chirp = User.all
+      render json: @chirp
+    end
   end
 
   def create
-    user = User.new(params.require(:user).permit(:name, :email))
-  # replace the `user_attributes_here` with the actual attribute keys
-
-    if user.save
+    user = User.new(user_params)
+    if user.save!
       render json: user
     else
       render json: user.errors.full_messages, status: :unprocessable_entity
@@ -22,27 +23,23 @@ class UsersController < ApplicationController
   end
   
   def update
-
       @chirp = User.find(params[:id])
-      if @chirp.update(banana_params)
-        # redirect_to show_user_url(@chirp)
-        redirect_to show_user_url(params[:id])
+      if @chirp.update(user_params)
+        redirect_to user_url(params[:id])
       else
         render json: @chirp.errors.full_messages, status: 422
       end
 
   end
-  
-  def banana_params
-    params.require(:user).permit(:name, :email)
-  end  
 
   def destroy  
     @chirp = User.find(params[:id])
     @chirp.destroy
-    redirect_to index_user_url
+    redirect_to user_url
   end
-
-
-
+  
+  private
+  def user_params
+    params.require(:user).permit(:name, :email)
+  end  
 end
