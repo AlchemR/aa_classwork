@@ -1,0 +1,21 @@
+/* PHASE 0: Sidebar */
+.profile-picture{
+  display:block;
+  margin-top: -150px;
+  position: relative;
+}
+
+
+.profile-nav li {
+  display: block;
+  padding: 10px;
+  /* border-top: 5px solid #ccca; */
+  border-top: 5px solid #ccca;
+}
+.profile-nav li:last-child{
+border-bottom:  5px solid #ccca;
+}
+
+.profile-nav  li:hover {
+  background-color:aqua;
+}
