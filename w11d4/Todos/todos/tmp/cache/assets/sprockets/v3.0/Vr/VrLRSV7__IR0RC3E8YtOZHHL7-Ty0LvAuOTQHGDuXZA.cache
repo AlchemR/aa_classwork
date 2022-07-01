@@ -1,0 +1,74 @@
+{:uriI"‡file://app/assets/javascripts/bundle.js.LICENSE.txt?type=text/plain&id=4c35e567d7050fdaebe670b02bb131896ad9889f479e5329d4547d5ce001c7c6:ET:load_pathI"app/assets/javascripts;T:filenameI"1app/assets/javascripts/bundle.js.LICENSE.txt;T:	nameI"bundle.js.LICENSE;T:logical_pathI"bundle.js.LICENSE.txt;T:content_typeI"text/plain;T:sourceI"Ñ/**
+ * @license React
+ * react-dom.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * react-is.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * react.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * scheduler.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * use-sync-external-store-shim.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * use-sync-external-store-shim/with-selector.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/** @license React v16.13.1
+ * react-is.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"4processors:type=text/plain&file_type=text/plain;TTI"?file-digest://app/assets/javascripts/bundle.js.LICENSE.txt;TTF:charsetI"
+utf-8;F:digest"%¬yÛùà£Sº|s‘Çi=HÛv»¬·.a3øÕ½ýrÃƒ:lengthiÑ:dependencies_digest"%ÞºSÞi @ÅÐó™ã¿*g˜×
+xâßï’7Ëª>:idI"E4c35e567d7050fdaebe670b02bb131896ad9889f479e5329d4547d5ce001c7c6;F:
+mtimel+~!¾b
