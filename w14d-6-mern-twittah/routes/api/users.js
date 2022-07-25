@@ -56,6 +56,7 @@ router.post('/register', (req, res) => {
 
 router.post('/login', (req, res) => {
   const { errors, isValid } = validateLoginInput(req.body);
+  console.log("users.js file asking where this shows up")
   console.log(errors);
   
   if (!isValid) {
