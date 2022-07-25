@@ -2,9 +2,13 @@
 
 import { combineReducers } from 'redux';
 import session from './session_reducer';
+import errors from "./errors_reducer"
+// import tweets from "./"
 
 const RootReducer = combineReducers({
-  session
+   errors,
+   session
+
 });
 
 export default RootReducer;
